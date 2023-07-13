@@ -1,0 +1,81 @@
+/* Set default font family and size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Style header */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Style navigation links */
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  /* Style main content */
+  main {
+    padding: 10px;
+  }
+  
+  /* Style table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table th, table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Style form */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input[type="text"], input[type="number"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Style error message */
+  .error {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

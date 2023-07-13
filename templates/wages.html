@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Wages for Week</h1>
+  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Wage</th>
+        <th>Working Hours</th>
+        <th>Week Start</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for wage in wage_records %}
+        <tr>
+          <td>{{ wage.employee_id }}</td>
+          <td>{{ wage.employee.name }}</td>
+          <td>{{ wage.wage }}</td>
+          <td>{{ wage.working_hours }}</td>
+          <td>{{ wage.week_start }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

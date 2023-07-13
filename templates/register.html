@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>New Employee Registration</h1>
+<form method="POST" action="{{ url_for('register') }}">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="employee_type">Employee Type:</label>
+    <select id="employee_type" name="employee_type" required>
+        <option value="NI">NI</option>
+        <option value="CashIN">CashIN</option>
+        <option value="Ni&CashIn">Ni&CashIn</option>
+    </select><br><br>
+    <label for="age">Age:</label>
+    <select id="age" name="age" required>
+        <option value="Below 23">Below 23</option>
+        <option value="Above 23">Above 23</option>
+    </select><br><br>
+
+    <input type="submit" value="Register">
+</form>
+{% endblock %}

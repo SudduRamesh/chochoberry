@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Attendance{% endblock %}
+
+{% block content %}
+    <h1>Attendance</h1>
+    <form method="POST" action="{{ url_for('attendance') }}">
+        <label for="employee_id">Employee:</label>
+        <select id="employee_id" name="employee_id" required>
+            {% for employee in employees %}
+            <option value="{{ employee.id }}">{{ employee.name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        {% for day in range(7) %}
+        <label for="in_time_{{ day }}">In-Time ({{ days[day] }}):</label>
+        <input type="time" id="in_time_{{ day }}" name="in_time_{{ day }}"><br><br>
+        <label for="out_time_{{ day }}">Out-Time ({{ days[day] }}):</label>
+        <input type="time" id="out_time_{{ day }}" name="out_time_{{ day }}"><br><br>
+        {% endfor %}
+
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
